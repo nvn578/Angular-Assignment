@@ -8,7 +8,15 @@
     <li class="list-group-item">Display the result on the page via string interpolation</li>
   </ul>
   <div class="container your-code">
-   <input type="text" class="form-control" (keyup)="OnWrite($event)" >
-  <p>{{value}}</p>
+    <div class="form-group">
+      <br>
+      <input type = "text" 
+           class="form-control" 
+           id="inputelement" 
+           placeholder="Please Enter . . ." 
+           #str
+           (input)="onInput(str.value)">
+      </div>
+      {{ description }} 
   </div>
 </div>
