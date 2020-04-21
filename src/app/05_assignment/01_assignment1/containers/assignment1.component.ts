@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+ 
 @Component({
   selector: 'app-assignment1',
   templateUrl: './assignment1.component.html',
   styleUrls: ['./assignment1.component.css']
 })
-export class Assignment1Component {
-
-}
+export class Assignment1Component implements OnInit{
+ constructor(){}
+ ngOnInit(){}
+ 
+ value: string;
+ OnWrite(event:KeyboardEvent){
+   this.value=(<HTMLInputElement>event.target).value;
+   
+ }
+  
+ }
